@@ -1,0 +1,234 @@
+!SESSION 2024-04-05 15:46:45.308 -----------------------------------------------
+eclipse.buildId=4.22.0.202403071427
+java.version=17.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.springframework.ide.eclipse.docker.client 4 0 2024-04-05 15:46:48.478
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.io.IOException: Exception in opening zip file: C:\Users\chitrendra.chaudhary\Downloads\Software\sts-4.22.0.RELEASE\configuration\org.eclipse.osgi\565\0\.cp\dependency\docker-java-core-3.2.12.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:371)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:51)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.internalOpen(CloseableBundleFile.java:146)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:83)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:285)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathEntry.loadManifest(ClasspathEntry.java:244)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathEntry.<init>(ClasspathEntry.java:80)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.createClassPathEntry(ModuleClassLoader.java:276)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.createClassPathEntry(ClasspathManager.java:379)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.getClasspath(ClasspathManager.java:327)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.addStandardClassPathEntry(ClasspathManager.java:236)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.addClassPathEntry(ClasspathManager.java:226)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassPathEntry(ClasspathManager.java:203)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.buildClasspath(ClasspathManager.java:177)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.<init>(ClasspathManager.java:101)
+	at org.eclipse.osgi.internal.loader.EquinoxClassLoader.<init>(EquinoxClassLoader.java:57)
+	at org.eclipse.osgi.internal.loader.BundleLoader.createClassLoaderPrivledged(BundleLoader.java:362)
+	at org.eclipse.osgi.internal.loader.BundleLoader.getModuleClassLoader(BundleLoader.java:273)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findEntries(BundleLoader.java:927)
+	at org.eclipse.osgi.container.ModuleWiring.findEntries(ModuleWiring.java:287)
+	at org.eclipse.osgi.storage.ManifestLocalization.findResource(ManifestLocalization.java:242)
+	at org.eclipse.osgi.storage.ManifestLocalization.lookupResourceBundle(ManifestLocalization.java:172)
+	at org.eclipse.osgi.storage.ManifestLocalization.getResourceBundle(ManifestLocalization.java:138)
+	at org.eclipse.osgi.storage.ManifestLocalization.getHeaders(ManifestLocalization.java:78)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getHeaders(BundleInfo.java:194)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.privGetHeaders(EquinoxBundle.java:539)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.getHeaders(EquinoxBundle.java:534)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.getHeaders(EquinoxBundle.java:528)
+	at org.apache.aries.spifly.BaseActivator.getAllHeaders(BaseActivator.java:174)
+	at org.apache.aries.spifly.BaseActivator.addConsumerWeavingData(BaseActivator.java:120)
+	at org.apache.aries.spifly.ConsumerBundleTrackerCustomizer.addingBundle(ConsumerBundleTrackerCustomizer.java:37)
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerAdding(BundleTracker.java:477)
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerAdding(BundleTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:257)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:184)
+	at org.osgi.util.tracker.BundleTracker.open(BundleTracker.java:161)
+	at org.apache.aries.spifly.BaseActivator.start(BaseActivator.java:103)
+	at org.apache.aries.spifly.dynamic.DynamicWeavingActivator.start(DynamicWeavingActivator.java:37)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:833)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:825)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:775)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1057)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:387)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:639)
+	at org.eclipse.osgi.container.Module.start(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2073)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:143)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2064)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2006)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1967)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1883)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+Caused by: java.io.FileNotFoundException: C:\Users\chitrendra.chaudhary\Downloads\Software\sts-4.22.0.RELEASE\configuration\org.eclipse.osgi\565\0\.cp\dependency\docker-java-core-3.2.12.jar (The process cannot access the file because it is being used by another process)
+	at java.base/java.io.RandomAccessFile.open0(Native Method)
+	at java.base/java.io.RandomAccessFile.open(RandomAccessFile.java:344)
+	at java.base/java.io.RandomAccessFile.<init>(RandomAccessFile.java:259)
+	at java.base/java.io.RandomAccessFile.<init>(RandomAccessFile.java:213)
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1476)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1441)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:718)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:252)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:181)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:195)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:353)
+	... 55 more
+
+!ENTRY org.eclipse.osgi 4 0 2024-04-05 15:46:48.490
+!MESSAGE Unable to extract content: osgi.identity; osgi.identity="org.springframework.ide.eclipse.docker.client"; type="osgi.bundle"; version:Version="4.22.0.202403071427"; singleton:="true": dependency/docker-java-transport-zerodep-3.2.12.jar
+!STACK 0
+java.nio.file.FileSystemException: C:\Users\chitrendra.chaudhary\Downloads\Software\sts-4.22.0.RELEASE\configuration\org.eclipse.osgi\565\0\.cp\dependency\docker-java-transport-zerodep-3.2.12.jar: The process cannot access the file because it is being used by another process
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:392)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:293)
+	at java.base/java.nio.file.Files.move(Files.java:1432)
+	at org.eclipse.osgi.storage.StorageUtil.move(StorageUtil.java:223)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.storeContent(BundleInfo.java:403)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getFile(CloseableBundleFile.java:232)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.getClasspath(ClasspathManager.java:324)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.addStandardClassPathEntry(ClasspathManager.java:236)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.addClassPathEntry(ClasspathManager.java:226)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassPathEntry(ClasspathManager.java:203)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.buildClasspath(ClasspathManager.java:177)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.<init>(ClasspathManager.java:101)
+	at org.eclipse.osgi.internal.loader.EquinoxClassLoader.<init>(EquinoxClassLoader.java:57)
+	at org.eclipse.osgi.internal.loader.BundleLoader.createClassLoaderPrivledged(BundleLoader.java:362)
+	at org.eclipse.osgi.internal.loader.BundleLoader.getModuleClassLoader(BundleLoader.java:273)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findEntries(BundleLoader.java:927)
+	at org.eclipse.osgi.container.ModuleWiring.findEntries(ModuleWiring.java:287)
+	at org.eclipse.osgi.storage.ManifestLocalization.findResource(ManifestLocalization.java:242)
+	at org.eclipse.osgi.storage.ManifestLocalization.lookupResourceBundle(ManifestLocalization.java:172)
+	at org.eclipse.osgi.storage.ManifestLocalization.getResourceBundle(ManifestLocalization.java:138)
+	at org.eclipse.osgi.storage.ManifestLocalization.getHeaders(ManifestLocalization.java:78)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getHeaders(BundleInfo.java:194)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.privGetHeaders(EquinoxBundle.java:539)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.getHeaders(EquinoxBundle.java:534)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.getHeaders(EquinoxBundle.java:528)
+	at org.apache.aries.spifly.BaseActivator.getAllHeaders(BaseActivator.java:174)
+	at org.apache.aries.spifly.BaseActivator.addConsumerWeavingData(BaseActivator.java:120)
+	at org.apache.aries.spifly.ConsumerBundleTrackerCustomizer.addingBundle(ConsumerBundleTrackerCustomizer.java:37)
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerAdding(BundleTracker.java:477)
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerAdding(BundleTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:257)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:184)
+	at org.osgi.util.tracker.BundleTracker.open(BundleTracker.java:161)
+	at org.apache.aries.spifly.BaseActivator.start(BaseActivator.java:103)
+	at org.apache.aries.spifly.dynamic.DynamicWeavingActivator.start(DynamicWeavingActivator.java:37)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:833)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:825)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:775)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1057)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:387)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:639)
+	at org.eclipse.osgi.container.Module.start(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2073)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:143)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2064)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2006)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1967)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1883)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-04-05 15:46:50.265
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-05 15:46:50.528
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-05 15:47:20.726
+!MESSAGE Logback config file: C:\Users\chitrendra.chaudhary\workspace-spring-tool-suite\oAuth\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.0.20240217-1525.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-04-05 15:47:21.112
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-04-05 15:47:21.112
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-04-05 15:47:21.427
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-04-05 15:47:21.427
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-04-05 15:47:25.353
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chitrendra.chaudhary'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-05 15:49:40.990
+!MESSAGE Classpath changed for project: oAuth
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-05 15:49:40.992
+!MESSAGE Boot project ADDED: oAuth
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-05 15:49:40.993
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-05 15:49:41.027
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-04-05 15:49:41.050
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\chitrendra.chaudhary\Downloads\Software\sts-4.22.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\javaw.exe
+-cp
+C:\Users\chitrendra.chaudhary\Downloads\Software\sts-4.22.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.53.0.202403071323\servers\spring-boot-language-server\BOOT-INF\classes;C:\Users\chitrendra.chaudhary\Downloads\Software\sts-4.22.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.53.0.202403071323\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Dlsp.completions.indentation.enable=true
+-Xmx1024m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\Users\chitrendra.chaudhary\Downloads\Software\sts-4.22.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.53.0.202403071323\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/Users/chitrendra.chaudhary/workspace-spring-tool-suite/oAuth/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1712312381049
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-05 15:49:41.051
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-04-05 15:49:41.058
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 24200
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-05 15:49:44.021
+!MESSAGE Classpath changed for project: oAuth
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-05 15:49:45.262
+!MESSAGE Classpath changed for project: oAuth
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-05 15:49:46.996
+!MESSAGE Classpath changed for project: oAuth
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-04-05 15:51:39.842
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-05 16:00:40.704
+!MESSAGE Classpath changed for project: oAuth
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-05 16:00:40.772
+!MESSAGE Classpath changed for project: oAuth
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-05 16:00:41.840
+!MESSAGE Classpath changed for project: oAuth
